@@ -17,6 +17,7 @@
 % This assumes your files are encoded as UTF8
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
+\usepackage{amssymb}
 % This is not strictly necessary, and may be commented out,
 % but it will improve the layout of the manuscript,
 % and will typically save some space.
@@ -41,6 +42,7 @@
 \usepackage{algorithm}
 \usepackage{algpseudocode}
 \usepackage{authblk}
+\usepackage{hyperref}
 
 
 
@@ -102,6 +104,9 @@ $^{*}$Equal contribution. $^{\dagger}$Corresponding author.
 
 \begin{document}
 \maketitle
+
+\noindent\textbf{Code Repository:} \url{https://github.com/Haoyu-Gu/data-mining}
+
 \begin{abstract}
 Existing symbolic music processing methods predominantly rely on token-based representations, which generate extremely long sequences and struggle to capture global structural patterns. To address these challenges, we propose MusiCode, a framework combining representation learning, data mining, and vector quantization for music analysis. Our framework consists of three components: (1) a Transformer-based autoencoder learning compact 768-dimensional embeddings through self-supervised reconstruction, (2) systematic data mining techniques including PCA, t-SNE, UMAP, and K-Means clustering to discover latent patterns and visualize musical relationships, and (3) a theoretical framework for Residual Vector Quantization (RVQ) enabling hierarchical discrete encoding. We implement and validate the first two components through experiments on 10,000 music segments. Our clustering analysis reveals meaningful patterns in the embedding space, with partial separation between high and low voice parts, demonstrating that the Transformer autoencoder captures voice-related structural information. While the RVQ framework is theoretically designed for future implementation, our results validate the effectiveness of combining learned representations with data mining techniques for music analysis, providing a foundation for discrete encoding and compression tasks.
 \end{abstract}
@@ -987,6 +992,22 @@ Haoyu Gu & Report writing and documentation; Literature review and related work 
 \bottomrule
 \end{tabularx}
 \end{table*}
+
+\subsection{AI Usage Statement}
+
+This work utilized Large Language Models (LLMs) and AI assistants for the following purposes:
+
+\begin{itemize}
+\item \textbf{Literature Review:} AI tools assisted in identifying relevant papers and summarizing recent advances in symbolic music representation learning, vector quantization, and data mining techniques.
+
+\item \textbf{Code Development:} AI assistants provided guidance on implementing UMAP dimensionality reduction, HDBSCAN clustering, and parameter search strategies. All code has been thoroughly tested and validated by the authors.
+
+\item \textbf{Writing Assistance:} LLMs helped with structuring sections, improving clarity, and proofreading. All technical content, experimental results, and interpretations were independently verified by the authors.
+
+\item \textbf{Visualization:} AI tools suggested visualization approaches for clustering results and embedding space analysis.
+\end{itemize}
+
+All AI-generated content has been carefully reviewed, verified, and validated by the authors. We take full responsibility for the correctness and accuracy of all results, claims, and conclusions presented in this work. No unauthorized data or proprietary information was used, and all code and data comply with relevant licenses and ethical guidelines.
 
 \subsection{Additional Experimental Details}
 
